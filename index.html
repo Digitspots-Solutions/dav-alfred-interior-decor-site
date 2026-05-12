@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAV-ALFRED INTERIOR DECOR - Transforming Spaces, Defining Style</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500&display=swap">
+    <style>
+        :root {
+            --color-primary: #121111;
+            --color-accent: #cf97a4;
+            --color-bg: #FFFBFB;
+            --color-text: #0A0A0A;
+            --color-surface: #f3eced;
+            --color-secondary-accent: #8d8d8d;
+            --font-display: 'Instrument Serif', serif;
+            --font-body: 'Karla', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 251, 251, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(18, 17, 17, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 26px;
+            height: 2px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/20019416/pexels-photo-20019416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: #FFFBFB;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            color: #FFFBFB;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: var(--color-bg);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-accent);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--color-accent);
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--color-text);
+            font-weight: 300;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 80px 2rem;
+            background: var(--color-surface);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-container h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2.5rem 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(18, 17, 17, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: var(--color-accent);
+            transition: height 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(18, 17, 17, 0.08);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--color-text);
+            font-weight: 300;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 2rem;
+            background: var(--color-bg);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--color-primary);
+        }
+
+        .contact-content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+
+        .contact-item {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--color-surface);
+            border: 1px solid rgba(18, 17, 17, 0.08);
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-item:hover {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            border-color: var(--color-primary);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ea952;
+            border-color: #1ea952;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-container {
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .about-content h2,
+            .services-container h2,
+            .contact-container h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            #hero {
+                height: 100vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            #about,
+            #services,
+            #contact {
+                padding: 48px 1.5rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 400px;
+                order: -1;
+            }
+
+            .about-content h2,
+            .services-container h2,
+            .contact-container h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+
+            .mobile-menu {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">DAV-ALFRED</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>DAV-ALFRED INTERIOR DECOR</h1>
+            <p>Welcome to DAV-ALFRED INTERIOR DECOR - Where creativity meets elegance. We bring your vision to life through exceptional interior design and fashion-forward creative solutions. Based in Takum, serving all of Taraba State and beyond.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <img src="https://images.pexels.com/photos/37198883/pexels-photo-37198883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="DAV-ALFRED Interior Design Consultation" class="about-image">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>DAV-ALFRED INTERIOR DECOR is your premier destination for transformative interior design and creative fashion solutions in Taraba State. We specialize in crafting spaces that reflect your unique personality while incorporating contemporary design trends with authentic Nigerian aesthetics. Our team combines technical expertise with artistic vision to deliver exceptional results that exceed expectations. From residential transformations to commercial spaces, we approach every project with meticulous attention to detail and a commitment to excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Interior Design & Decoration</h3>
+                    <p>Complete home and office makeovers, space planning, color consultation, furniture selection and arrangement, custom window treatments, and lighting design tailored to Nigerian homes and businesses.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fashion & Creative Design</h3>
+                    <p>Bespoke fashion pieces, creative styling solutions, wardrobe consultation, and fashion-forward designs that celebrate contemporary and traditional Nigerian aesthetics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Furnishing</h3>
+                    <p>Custom-made furniture, upholstery services, decorative accessories, and unique pieces crafted to perfectly fit your space and style preferences.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultation Services</h3>
+                    <p>Professional design consultations, project planning, budget management, and expert guidance throughout your transformation journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>Ready to transform your space or elevate your style? Contact DAV-ALFRED INTERIOR DECOR today for a consultation. We're conveniently located in Takum and serve clients throughout Taraba State.</p>
+                <p><strong>Visit our showroom:</strong> After mobile link, before Essential drugs, Jalingo, Taraba State</p>
+                <p>Call or WhatsApp us today to discuss your project and receive a personalized quote. Let's bring your vision to life together.</p>
+            </div>
+            <div class="contact-details">
+                <a href="tel:07034868311" class="contact-item">Call: 07034868311</a>
+                <a href="mailto:info@davalfreddecor.com" class="contact-item">Email Us</a>
+                <a href="https://wa.me/2347034868311" target="_blank" class="contact-item whatsapp-btn">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DAV-ALFRED INTERIOR DECOR. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347034868311" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.265 1.414 1.414-5.265-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.07 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.97 18.678c-0.397-0.199-2.348-1.158-2.713-1.291s-0.628-0.199-0.893 0.199c-0.265 0.397-1.026 1.291-1.258 1.556s-0.463 0.298-0.86 0.099c-0.397-0.199-1.677-0.618-3.194-1.972-1.181-1.053-1.978-2.353-2.21-2.75s-0.025-0.612 0.174-0.811c0.179-0.179 0.397-0.463 0.596-0.694s0.265-0.397 0.397-0.662c0.132-0.265 0.066-0.496-0.033-0.694s-0.893-2.15-1.224-2.945c-0.322-0.776-0.65-0.671-0.893-0.683-0.231-0.012-0.496-0.015-0.76-0.015s-0.694 0.099-1.058 0.496c-0.364 0.397-1.39 1.357-1.39 3.311s1.423 3.841 1.621 4.106c0.199 0.265 2.807 4.287 6.802 6.012 0.95 0.41 1.691 0.655 2.269 0.838 0.957 0.304 1.828 0.261 2.517 0.159 0.768-0.115 2.348-0.96 2.68-1.888s0.331-1.723 0.232-1.888c-0.099-0.165-0.364-0.265-0.76-0.463z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

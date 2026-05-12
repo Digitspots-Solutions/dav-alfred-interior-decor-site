@@ -1,0 +1,42 @@
+{
+  "businessName": "DAV-ALFRED INTERIOR DECOR",
+  "industry": "Fashion and Creative Design",
+  "tone": "creative and sophisticated",
+  "tagline": "Transforming Spaces, Defining Style",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Welcome to DAV-ALFRED INTERIOR DECOR - Where creativity meets elegance. We bring your vision to life through exceptional interior design and fashion-forward creative solutions. Based in Takum, serving all of Taraba State and beyond.",
+      "imagePrompt": "Luxurious Nigerian interior design showcase featuring elegant living room with contemporary African-inspired furniture, rich fabrics in earth tones and jewel colors, modern lighting fixtures, textured walls with local art pieces, warm ambient lighting, professional interior photography, high-end residential space in Nigeria",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "DAV-ALFRED INTERIOR DECOR is your premier destination for transformative interior design and creative fashion solutions in Taraba State. We specialize in crafting spaces that reflect your unique personality while incorporating contemporary design trends with authentic Nigerian aesthetics. Our team combines technical expertise with artistic vision to deliver exceptional results that exceed expectations. From residential transformations to commercial spaces, we approach every project with meticulous attention to detail and a commitment to excellence.",
+      "imagePrompt": "Professional Nigerian interior designer consulting with clients in a beautifully decorated showroom, fabric swatches and color samples spread on elegant table, mood boards with Nigerian-inspired patterns, natural daylight streaming through windows, warm professional atmosphere, diverse Nigerian clients engaged in discussion",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "**Interior Design & Decoration**\nComplete home and office makeovers, space planning, color consultation, furniture selection and arrangement, custom window treatments, and lighting design tailored to Nigerian homes and businesses.\n\n**Fashion & Creative Design**\nBespoke fashion pieces, creative styling solutions, wardrobe consultation, and fashion-forward designs that celebrate contemporary and traditional Nigerian aesthetics.\n\n**Custom Furnishing**\nCustom-made furniture, upholstery services, decorative accessories, and unique pieces crafted to perfectly fit your space and style preferences.\n\n**Consultation Services**\nProfessional design consultations, project planning, budget management, and expert guidance throughout your transformation journey.",
+      "imagePrompt": "Grid showcase of interior design services: modern Nigerian living room with vibrant Ankara accent pillows, elegant bedroom with contemporary African decor, stylish office space, beautiful fabric samples and fashion sketches, custom furniture pieces, all photographed professionally with perfect lighting and composition",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Get In Touch",
+      "copy": "Ready to transform your space or elevate your style? Contact DAV-ALFRED INTERIOR DECOR today for a consultation. We're conveniently located in Takum and serve clients throughout Taraba State.\n\nVisit our showroom: After mobile link, before Essential drugs, Jalingo, Taraba State\n\nCall or WhatsApp us today to discuss your project and receive a personalized quote. Let's bring your vision to life together.",
+      "imagePrompt": "Welcoming interior design consultation space in Nigeria, elegant reception area with comfortable seating, portfolio books and design magazines on coffee table, sample materials displayed aesthetically, bright natural lighting, professional yet inviting atmosphere, African decorative elements, phone and notepad suggesting easy contact",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "07034868311",
+    "email": "info@davalfreddecor.com",
+    "address": "After mobile link, before Essential drugs, Jalingo, Taraba State",
+    "whatsapp": "https://wa.me/2347034868311"
+  }
+}
